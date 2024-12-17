@@ -1,0 +1,173 @@
+/* Body content */
+body {
+    background-color: #3d3d3d;
+    background-attachment: fixed;
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    color: #ffffff;
+    text-shadow: -1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.body {
+    margin-left: 180px;
+    padding: 20px;
+}
+
+.paragraph {
+    margin:  30px 0px 0px -8px;
+    padding: 10px;
+    text-align: justify;
+    max-width: 90%;
+}
+
+p {
+    color: #ffffff;
+    text-shadow: -1px 1px 2px rgba(0, 0, 0, 0.2);
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+} 
+
+/* Sidebar */
+.sidebar {
+    background-color: #464646;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: start;
+    padding: 10px;
+    width: 160px; /* Reduced width */
+    height: 100vh;
+    box-shadow: 2px 0 4px rgba(0, 0, 0, 0.2);
+    border-right: 2px solid #444444;
+    position: fixed;
+    z-index: 10; /* Sidebar above the taskbar */
+}
+
+.logo {
+    width: 155px;
+    height: auto;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.logo-divider {
+    height: 1px;
+    width: 120px;
+    margin: 6px 0px 0px 2px;
+    background-color: rgb(238, 238, 238);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.nav-item {
+    position: relative;
+    list-style: none;
+    width: 100%;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #ffffff;
+    text-shadow: -1px 1px 2px rgba(0, 0, 0, 0.2);
+    padding: 8px 10px;
+    display: block;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.15s ease;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.nav-link:hover, 
+.nav-item.active .nav-link, 
+.nav-item:hover .nav-link {
+    background-color: #a13e3b;
+    color: #ffffff;
+    text-shadow: -1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: #4d4d4d;
+    min-width: 180px;
+    display: none;
+    flex-direction: column;
+    box-shadow: 4px 0 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.dropdown a {
+    color: #ffffff;
+    text-shadow: -1px 1px 2px rgba(0, 0, 0, 0.2);
+    padding: 8px 10px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.2s ease;
+}
+
+.dropdown a:hover {
+    background-color: #a13e3b;
+}
+
+.nav-item.active .dropdown,
+.nav-item:hover .dropdown {
+    display: flex;
+    opacity: 1;
+}
+
+/* Taskbar - Positioned below the sidebar */
+.taskbar {
+    position: fixed;
+    left: 180px;
+    background-color: #353535;
+    z-index: 5;
+    height: 50px;
+    width: calc(100% - 160px);
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.search-bar {
+    width: 300px;
+    height: 25px;
+    border-radius: 5px;
+    padding: 0 10px 0 30px;
+    margin: 0 0 0 7px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+.search-icon {
+    position: absolute;
+    left: 13px;
+    width: 16px;
+    height: auto;
+    pointer-events: none;
+}
