@@ -114,6 +114,11 @@ nav {
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
+.search-input::placeholder {
+  color: #e4d1d1;
+  font-style: italic;
+}
+
 /* Search Icon */
 .search-icon {
   width: 18px;
